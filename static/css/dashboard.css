@@ -1,0 +1,127 @@
+/* dashboard.css */
+.dashboard-container {
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Cards */
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+/* Profile Card */
+.profile-info p {
+    margin: 0.3rem 0;
+}
+
+.btn-outline {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #667eea;
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: #fff;
+}
+
+/* Courses Card */
+.course-item {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.course-item h4 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1rem;
+}
+
+.course-item p, .course-item span {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Quick Links */
+.quick-links .quick-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background: rgba(102, 126, 234, 0.1);
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.quick-links .quick-link i {
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+.quick-links .quick-link:hover {
+    background: #667eea;
+    color: #fff;
+}
+
+.no-data {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}

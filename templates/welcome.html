@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Welcome - Student Portal{% endblock %}
+
+{% block extra_css %}
+<!-- Link to welcome page specific CSS -->
+<link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="welcome-page">
+    <!-- Header -->
+    <div class="welcome-header">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Student Portal</h1>
+        </div>
+        <p>Your gateway to academic success</p>
+
+        <!-- Register Button -->
+        <div class="welcome-register-btn">
+            <a href="{% url 'register' %}" class="btn btn-primary btn-large">
+                <i class="fas fa-user-plus"></i> Register Here
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="welcome-content">
+        <!-- Welcome Text -->
+        <div class="welcome-text">
+            <h2>Welcome to Our Student Portal</h2>
+            <p>Access your courses, connect with peers, and manage your academic journey all in one place.</p>
+
+            <!-- Features -->
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-book"></i>
+                    <h3>Course Materials</h3>
+                    <p>Access all your learning resources in one place</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your academic progress and achievements</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Schedule Management</h3>
+                    <p>Keep track of your classes and deadlines</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Auth Card -->
+        <div class="welcome-auth">
+            <div class="auth-card">
+                <h3>Get Started</h3>
+                <p>Access your student account or create a new one</p>
+
+                <div class="auth-buttons">
+                    <a href="{% url 'login' %}" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                    <a href="{% url 'register' %}" class="btn btn-secondary">
+                        <i class="fas fa-user-plus"></i> Register
+                    </a>
+                </div>
+
+                <div class="admin-link">
+                    <p>Administrator? <a href="/admin/">Access admin panel</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="welcome-footer">
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </div>
+</div>
+{% endblock %}

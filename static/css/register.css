@@ -1,0 +1,88 @@
+/* register.css */
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* colorful background */
+    padding: 2rem;
+}
+
+/* Auth card */
+.register-page .auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Form groups */
+.register-page .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.register-page label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.register-page input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.register-page .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.register-page .btn-primary {
+    background: #764ba2;  /* purple gradient end color */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+}
+
+.register-page .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.register-page .btn-full {
+    width: 100%;
+}
+
+/* Form errors */
+.register-page .alert-error {
+    background: #ffdddd;
+    border-left: 4px solid #f44336;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #a94442;
+    border-radius: 5px;
+}
+
+/* Footer / extra text */
+.register-page .auth-footer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}

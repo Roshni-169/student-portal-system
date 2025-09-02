@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile - Student Portal{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        <h1>Student Profile</h1>
+        <p>Manage your personal information</p>
+    </div>
+
+    <div class="profile-content">
+        <form method="post" enctype="multipart/form-data" class="profile-form">
+            {% csrf_token %}
+            
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="id_first_name">First Name</label>
+                        <input type="text" name="first_name" id="id_first_name" 
+                               value="{{ user.first_name }}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_last_name">Last Name</label>
+                        <input type="text" name="last_name" id="id_last_name" 
+                               value="{{ user.last_name }}" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    <input type="email" name="email" id="id_email" 
+                           value="{{ user.email }}" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Additional Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="id_date_of_birth">Date of Birth</label>
+                        {{ form.date_of_birth }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_phone_number">Phone Number</label>
+                        {{ form.phone_number }}
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id_address">Address</label>
+                    {{ form.address }}
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a href="{% url 'dashboard' %}" class="btn btn-outline">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
