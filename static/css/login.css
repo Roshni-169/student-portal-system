@@ -1,120 +1,86 @@
-/* Login Page Styles - Purple Theme */
-
-body {
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #8f5de8); /* Purple gradient */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Same as register page */
+    padding: 2rem;
 }
 
-.auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Auth card */
+.login-page .auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 450px;
     width: 100%;
-}
-
-.auth-card {
-    background: #fff;
-    padding: 2.5rem 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    max-width: 400px;
-    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    color: #2c3e50;
     text-align: center;
 }
 
-.auth-header i {
-    font-size: 3rem;
-    color: #8f5de8; /* Purple icon */
-    margin-bottom: 0.5rem;
-}
-
-.auth-header h2 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #333;
-}
-
-.auth-form {
-    margin-top: 1.5rem;
-}
-
-.form-group {
-    text-align: left;
+/* Form groups */
+.login-page .form-group {
     margin-bottom: 1rem;
+    text-align: left;
 }
 
-.form-group label {
+.login-page label {
     display: block;
-    margin-bottom: 0.3rem;
-    color: #555;
+    margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
-.form-control {
+.login-page input {
     width: 100%;
-    padding: 0.55rem 0.8rem;
+    padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
-    transition: 0.3s;
 }
 
-.form-control:focus {
-    border-color: #8f5de8;
-    outline: none;
-    box-shadow: 0 0 5px rgba(143, 93, 232, 0.5);
-}
-
-.btn {
+/* Buttons */
+.login-page .btn {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background-color: #8f5de8;
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background-color: #6a11cb;
-}
-
-.btn-full {
     width: 100%;
-    margin-top: 1rem;
-}
-
-.alert-error {
-    background-color: #ffe6e6;
-    color: #d8000c;
-    padding: 0.6rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.auth-footer {
-    margin-top: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.auth-footer a {
-    color: #8f5de8;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
     text-decoration: none;
-    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
 }
 
-.auth-footer a:hover {
-    text-decoration: underline;
+.login-page .btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+}
+
+.login-page .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.login-page .btn-full {
+    width: 100%;
+}
+
+/* Form errors */
+.login-page .alert-error {
+    background: #ffdddd;
+    border-left: 4px solid #f44336;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #a94442;
+    border-radius: 5px;
+}
+
+/* Footer / extra text */
+.login-page .auth-footer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
 }

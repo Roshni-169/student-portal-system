@@ -1,14 +1,12 @@
 import os
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Security
 SECRET_KEY = 'django-insecure-zew_ha*x3@u0y)iz25b30)zfzce35j0slt^gvrmya4%4a#t@uw'
-
-DEBUG = True  # Change to False in production
-
-# Allowed hosts
+DEBUG = True
 ALLOWED_HOSTS = ['student-portal-system-1.onrender.com', '127.0.0.1', 'localhost']
 
 # Installed apps
@@ -33,7 +31,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# URLs and WSGI
 ROOT_URLCONF = 'student_portal_system.urls'
+WSGI_APPLICATION = 'student_portal_system.wsgi.application'
 
 # Templates
 TEMPLATES = [
@@ -52,8 +52,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'student_portal_system.wsgi.application'
-
 # Database
 DATABASES = {
     'default': {
@@ -62,7 +60,7 @@ DATABASES = {
     }
 }
 
-# Password validation
+# Password validators
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
@@ -76,18 +74,19 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
+# Static files (CSS, JS, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']  # Development
-STATIC_ROOT = BASE_DIR / 'staticfiles'    # Production
+STATIC_ROOT = BASE_DIR / 'staticfiles'     # Production
+STATICFILES_DIRS = [BASE_DIR / 'static']   # Development
 
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+# Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Authentication
+# Authentication redirects
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'welcome'
 LOGIN_URL = 'login'

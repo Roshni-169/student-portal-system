@@ -4,12 +4,12 @@
 {% block title %}Welcome - Student Portal{% endblock %}
 
 {% block extra_css %}
-<!-- Link to welcome page specific CSS -->
 <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="welcome-page">
+
     <!-- Header -->
     <div class="welcome-header">
         <div class="logo">
@@ -17,8 +17,6 @@
             <h1>Student Portal</h1>
         </div>
         <p>Your gateway to academic success</p>
-
-        <!-- Register Button -->
         <div class="welcome-register-btn">
             <a href="{% url 'register' %}" class="btn btn-primary btn-large">
                 <i class="fas fa-user-plus"></i> Register Here
@@ -28,6 +26,7 @@
 
     <!-- Main Content -->
     <div class="welcome-content">
+
         <!-- Welcome Text -->
         <div class="welcome-text">
             <h2>Welcome to Our Student Portal</h2>
@@ -58,7 +57,6 @@
             <div class="auth-card">
                 <h3>Get Started</h3>
                 <p>Access your student account or create a new one</p>
-
                 <div class="auth-buttons">
                     <a href="{% url 'login' %}" class="btn btn-primary">
                         <i class="fas fa-sign-in-alt"></i> Login
@@ -67,17 +65,18 @@
                         <i class="fas fa-user-plus"></i> Register
                     </a>
                 </div>
-
                 <div class="admin-link">
                     <p>Administrator? <a href="/admin/">Access admin panel</a></p>
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- Footer -->
     <div class="welcome-footer">
         <p>&copy; 2025 Student Portal. All rights reserved.</p>
     </div>
+
 </div>
 {% endblock %}
