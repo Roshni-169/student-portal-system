@@ -1,1 +1,1 @@
-web: gunicorn student_portal_system.wsgi 
+web: gunicorn student_portal_system.wsgi
